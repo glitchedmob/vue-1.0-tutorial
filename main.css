@@ -1,0 +1,10 @@
+form span {
+	display: block;
+	color: red;
+}
+
+form textarea,
+form button {
+	margin-top: 5px;
+	display: block;
+}
