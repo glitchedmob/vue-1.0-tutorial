@@ -1,10 +1,24 @@
-form span {
-	display: block;
-	color: red;
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-form textarea,
+#app {
+	display: table;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+form {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 form button {
-	margin-top: 5px;
 	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
