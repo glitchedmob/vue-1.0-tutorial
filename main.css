@@ -12,12 +12,12 @@ body, html {
 	width: 100%;
 }
 
-form {
+.container {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-form button {
+.container button {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
