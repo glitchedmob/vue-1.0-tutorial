@@ -7,3 +7,17 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+.plan {
+	margin-top: 5px;
+}
+
+.plan-price {
+	position: absolute;
+	left: 100px;
+}
+
+.plan-change, .plan-selected {
+	position: absolute;
+	left: 200px;
+}
