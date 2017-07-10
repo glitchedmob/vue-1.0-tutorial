@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title></title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="main.css">
-	</head>
-	<body>
-	
-	<div id="app">
-		<div class="container">
-			<counter subject="Likes"></counter>
-			<counter subject="Dislikes"></counter>
-		</div>
-	</div>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
 
-	<template id="counter-template">
-		<h1>{{ subject }}</h1>
-		<button @click="count += 1">Increment {{ count }}</button>
-	</template>
+
+		<h1>Skill: {{ skill }}</h1>
+		<input type="text" v-model="points">
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.js"></script>
 
 	<script>
-		Vue.component("counter", {
-			template: '#counter-template',
+		new Vue({
+			el: 'body',
 
-			props: ['subject'],
+			data: {
+				point: 100
+			},
 
-			data: function() {
-				return { count: 0 }
+			computed: {
+				skill: function() {
+					if (this.points <= 100) {
+						return "Beginner";
+					}
+
+					return "Advanced";
+				}
 			}
 		});
-
-		new Vue({
-			el: '#app',
-		});
 	</script>
-	</body>
+</body>
 </html>
