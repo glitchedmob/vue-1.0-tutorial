@@ -1,9 +1,12 @@
 Vue.component('home-page', {
-	template: '<h1>Home Page</h1>'
 });
 
 Vue.component('about-page', {
-	template: '<h1>About Page</h1>'
+	methods: {
+		doSomething: function() {
+			alert("hello");
+		}
+	}
 });
 
 new Vue({

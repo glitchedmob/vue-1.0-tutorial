@@ -85,12 +85,14 @@ module.exports = __webpack_require__(40);
 /***/ (function(module, __webpack_exports__) {
 
 "use strict";
-Vue.component('home-page', {
-	template: '<h1>Home Page</h1>'
-});
+Vue.component('home-page', {});
 
 Vue.component('about-page', {
-	template: '<h1>About Page</h1>'
+	methods: {
+		doSomething: function doSomething() {
+			alert("hello");
+		}
+	}
 });
 
 new Vue({

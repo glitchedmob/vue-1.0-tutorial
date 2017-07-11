@@ -9,10 +9,10 @@
 <body>
 	<div id="app">
 
-		<component :is="currentView"></component>
-
-		<a href="#" @click="currentView = 'home-page'">Home</a> |
-		<a href="#" @click="currentView = 'about-page'">About</a>
+		<component is="about-page" inline-template>
+			<h2>About Page</h2>
+			<button @click="doSomething">Click me</button>
+		</component>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
