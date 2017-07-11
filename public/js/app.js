@@ -85,17 +85,36 @@ module.exports = __webpack_require__(40);
 /***/ (function(module, __webpack_exports__) {
 
 "use strict";
-Vue.filter('role', function (value, role) {
-	return value.filter(function (item) {
-		return item.role == role;
-	});
+Vue.component('message', {
+	template: '#message-template',
+
+	data: function data() {
+		return {
+			message: ''
+		};
+	},
+
+	methods: {
+		storeMessage: function storeMessage() {
+			this.$dispatch('new-message', this.message);
+
+			this.message = '';
+		}
+	}
 });
 
 new Vue({
 	el: '#app',
 
 	data: {
-		people: [{ name: 'Joe', role: 'admin' }, { name: 'Susan', role: 'admin' }, { name: 'Frank', role: 'student' }, { name: 'Levi', role: 'admin' }]
+		messages: []
+	},
+
+	methods: {
+		handleNewMessaage: function handleNewMessaage(message) {
+			console.log('Parent is handeling ' + message);
+			this.messages.push(message);
+		}
 	}
 });
 

@@ -1,7 +1,19 @@
-Vue.filter('role', function(value, role) {
-	return value.filter(function(item) {
-		return item.role == role;
-	});
+Vue.component('message', {
+	template: '#message-template',
+
+	data: function() {
+		return {
+			message: ''
+		}
+	},
+
+	methods: {
+		storeMessage: function() {
+			this.$dispatch('new-message', this.message);
+
+			this.message = '';
+		}
+	}
 });
 
 
@@ -9,11 +21,13 @@ new Vue({
 	el: '#app',
 
 	data: {
-		people: [
-			{ name: 'Joe', role: 'admin' },
-			{ name: 'Susan', role: 'admin' },
-			{ name: 'Frank', role: 'student' },
-			{ name: 'Levi', role: 'admin' },
-		]
+		messages: []
+	},
+
+	methods: {
+		handleNewMessaage: function(message) {
+			console.log('Parent is handeling ' + message);
+			this.messages.push(message);
+		}
 	}
 });
