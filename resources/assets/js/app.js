@@ -13,13 +13,13 @@ new Vue({
 	el: '#app',
 
 	data: {
-		shared: store
+		shared: store.state
 	},
 
 	components: {
 		notification: {
 			data: function() {
-				return store;
+				return store.state;
 			},
 			template: '<h2>{{ username }}: <slot></slot></h2>'
 		}
