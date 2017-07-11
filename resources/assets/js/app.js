@@ -1,27 +1,15 @@
-var store = {
-	state: {
-		username: 'levi_zitting'
-	},
+Vue.component('home-page', {
+	template: '<h1>Home Page</h1>'
+});
 
-	updateUserName: function(username) {
-		this.state.username = username;
-	}
-}
-
+Vue.component('about-page', {
+	template: '<h1>About Page</h1>'
+});
 
 new Vue({
 	el: '#app',
 
 	data: {
-		shared: store.state
-	},
-
-	components: {
-		notification: {
-			data: function() {
-				return store.state;
-			},
-			template: '<h2>{{ username }}: <slot></slot></h2>'
-		}
+		currentView: 'home-page'
 	}
 })

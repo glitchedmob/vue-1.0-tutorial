@@ -8,11 +8,14 @@
 </head>
 <body>
 	<div id="app">
-		<h1>Welcome Back, @{{ shared.username }}</h1>
-		<notification>This is a notification</notification>
+
+		<component :is="currentView"></component>
+
+		<a href="#" @click="currentView = 'home-page'">Home</a> |
+		<a href="#" @click="currentView = 'about-page'">About</a>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
 	<script src="/js/app.js"></script>
 </body>
 </html>
