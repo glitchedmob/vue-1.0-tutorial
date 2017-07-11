@@ -1,16 +1,19 @@
-var Vue = require('vue');
+Vue.filter('role', function(value, role) {
+	return value.filter(function(item) {
+		return item.role == role;
+	});
+});
 
-import Alert from './components/Alert.vue';
 
 new Vue({
 	el: '#app',
 
-	components: {
-		Alert: Alert
-	},
-
-
-	ready: function() {
-		Alert("Ready to go!")
+	data: {
+		people: [
+			{ name: 'Joe', role: 'admin' },
+			{ name: 'Susan', role: 'admin' },
+			{ name: 'Frank', role: 'student' },
+			{ name: 'Levi', role: 'admin' },
+		]
 	}
 });

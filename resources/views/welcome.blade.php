@@ -8,19 +8,12 @@
 </head>
 <body>
 	<div id="app">
-		<alert type="success">Correct</alert>
-		<alert type="primary">information</alert>
-		<alert type="warning">Warning!</alert>
-		<alert type="danger">Error!</alert>
+		<ul>
+			<li v-for="person in people | role 'admin'">@{{ person.name }}</li>
+		</ul>
 	</div>
 
-	<template id="alert-template">
-		<div :class="['alert', type]" v-show="show">
-			<slot></slot>
-			<span class="close" @click="show = false">&times;</span>
-		</div>
-	</template>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.13/vue.min.js"></script>
 	<script src="/js/app.js"></script>
 </body>
 </html>
