@@ -85,15 +85,30 @@ module.exports = __webpack_require__(40);
 /***/ (function(module, __webpack_exports__) {
 
 "use strict";
-Vue.transition('fade', {
-	enterClass: 'fadeInUp',
-	leaveClass: 'fadeOutLeft'
-});
+var store = {
+	state: {
+		username: 'levi_zitting'
+	},
+
+	updateUserName: function updateUserName(username) {
+		this.state.username = username;
+	}
+};
 
 new Vue({
 	el: '#app',
+
 	data: {
-		show: true
+		shared: store
+	},
+
+	components: {
+		notification: {
+			data: function data() {
+				return store;
+			},
+			template: '<h2>{{ username }}: <slot></slot></h2>'
+		}
 	}
 });
 
