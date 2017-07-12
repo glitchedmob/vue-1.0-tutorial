@@ -63,56 +63,56 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(13);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
-
-/***/ 1:
-/***/ (function(module, __webpack_exports__) {
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var RendersGraph = {
-	methods: {
-		render: function render() {
-			console.log("Render the chart");
-		}
-	}
-};
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_RendersGraph__ = __webpack_require__(7);
 
-var RevenueGraph = new Vue({
+
+new Vue({
 	el: '#app',
 
-	mixins: [RendersGraph],
-
-	ready: function ready() {
-		this.render();
-	}
-});
-
-var SignUpsGraph = new Vue({
-	el: '#app',
-
-	mixins: [RendersGraph],
-
-	ready: function ready() {
-		this.render();
-	}
+	mixins: [__WEBPACK_IMPORTED_MODULE_0__mixins_RendersGraph__["a" /* default */]]
 });
 
 /***/ }),
-
-/***/ 13:
+/* 2 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-/***/ })
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/******/ });
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+	created: function created() {
+		console.log('mixin created method was called');
+	},
+
+
+	methods: {
+		render: function render() {
+			alert('render the chart');
+		}
+	}
+});
+
+/***/ })
+/******/ ]);

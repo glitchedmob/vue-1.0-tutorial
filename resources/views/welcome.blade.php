@@ -9,10 +9,10 @@
 <body>
 
 	<div id="app">
-
+		<button @click="render">Click</button>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script> 
 	<script src="/js/app.js"></script>
 </body>
 </html> 

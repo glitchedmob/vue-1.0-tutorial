@@ -1,29 +1,7 @@
-const RendersGraph = {
-	methods: {
-		render() {
-			console.log("Render the chart");
-		}
-	}
-}
+import RendersGraph from './mixins/RendersGraph'
 
-const RevenueGraph = new Vue({
+new Vue({
 	el: '#app',
-
-	mixins: [RendersGraph],
-
-	ready() {
-		this.render();
-	}
-});
-
-const SignUpsGraph = new Vue({
-	el: '#app',
-
-	mixins: [RendersGraph],
-
-	ready() {
-		this.render();
-	}
-
 	
+	mixins: [RendersGraph]
 });
