@@ -9,12 +9,10 @@
 <body>
 
 	<div id="app">
-		@if(session()->has('status'))
-			<alert type="success">{{ session('status') }}</alert>
-		@endif
+
 	</div>
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
 	<script src="/js/app.js"></script>
 </body>
 </html> 

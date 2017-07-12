@@ -14,8 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('begin', function() {
-    session()->flash('status', 'You are now signed in');
-    return redirect('/');
-});

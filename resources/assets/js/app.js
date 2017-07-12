@@ -1,11 +1,29 @@
-import Vue from 'vue';
+const RendersGraph = {
+	methods: {
+		render() {
+			console.log("Render the chart");
+		}
+	}
+}
 
-import Alert from './components/Alerts.vue';
-
-new Vue({
+const RevenueGraph = new Vue({
 	el: '#app',
 
-	components: {
-		Alert: Alert
+	mixins: [RendersGraph],
+
+	ready() {
+		this.render();
 	}
+});
+
+const SignUpsGraph = new Vue({
+	el: '#app',
+
+	mixins: [RendersGraph],
+
+	ready() {
+		this.render();
+	}
+
+	
 });
