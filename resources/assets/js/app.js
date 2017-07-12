@@ -1,18 +1,13 @@
-Vue.component('home-page', {
-});
+import Vue from 'vue';
 
-Vue.component('about-page', {
-	methods: {
-		doSomething: function() {
-			alert("hello");
-		}
-	}
-});
+import HomeView from './components/HomeView.vue';
+import AboutView from './components/AboutView.vue';
 
 new Vue({
 	el: '#app',
 
-	data: {
-		currentView: 'home-page'
+	components: {
+		HomeView,
+		AboutView
 	}
-})
+});

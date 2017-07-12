@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::delete('posts/{post}', function(App\Post $post) {
-    $post->delete();
+Route::get('about', function() {
+    return view('about');
 });
