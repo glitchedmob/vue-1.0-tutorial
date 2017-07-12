@@ -1,13 +1,11 @@
 import Vue from 'vue';
 
-import HomeView from './components/HomeView.vue';
-import AboutView from './components/AboutView.vue';
+import Alert from './components/Alerts.vue';
 
 new Vue({
 	el: '#app',
 
 	components: {
-		HomeView,
-		AboutView
+		Alert: Alert
 	}
 });
